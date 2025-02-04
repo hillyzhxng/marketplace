@@ -1,12 +1,10 @@
-name: Python Application
+name: Python application
 on: push
-jobs: 
+jobs:
   build:
     runs-on: ubuntu-latest
-    steps: 
-      - name: Check out code
-        uses: actions/checkout@v2
-      - name: Check syntax errors
-        uses: clauss/Find-Python-syntax-errors-action@v0.2.0
-        
-          
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+    - name: Python Syntax Checker
+      uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
